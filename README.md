@@ -31,3 +31,10 @@
 1. You have a project to contribute to for fun.
 	- "Hey Mr. Job interviewer dude, look at this project I was a part of completely outside of school.
 	- Projects outside of school arguably make you learn better than school projects do.
+
+2. Learn good team project schools, as well as version control.
+	- Two huge plusses in the eyes of a hiring team.
+
+3. Possibly change the game for underground artists.
+	- The streaming service could eliminate the need for an artist to have to market.
+	- - idk
