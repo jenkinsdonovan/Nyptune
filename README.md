@@ -2,7 +2,7 @@
 * Temporary name
 * Meant to be an alternative to soundcloud
 
-# Soundcloud shortcomings
+## Soundcloud shortcomings
 1. Soundcloud adds copyright strikes when someone tries to upload a remix of a licensed track
 	- This sucks dick because 90% of the time, the uploader doesn't know the track is licensed.
 	- We will use machine learning n shit to detect when a track is being illegally uploaded.
@@ -27,7 +27,7 @@
 	- I personally dig a minimal material look. We'll brainstorm ideas.
 	- This is where the graphic design/frontend devs come in.
 
-# Why contribute?
+## Why contribute?
 1. You have a project to contribute to for fun.
 	- "Hey Mr. Job interviewer dude, look at this project I was a part of completely outside of school.
 	- Projects outside of school arguably make you learn better than school projects do.
@@ -42,7 +42,7 @@
 		- Getting instant feedback is difficult if no one listens to your song.
 	- By taking care of marketing, artists focus more on making better music.
 
-# How can we make this happen?
+## How can we make this happen?
 1. Have UI/Frontend devs make the site look and feel like jizzing in a silk napkin.
 2. Have A1 communication. We're a group of homies with no boss.
 3. Backend devs focus on making bomb ass servers that serve shit better than anyone else.
