@@ -43,9 +43,9 @@
 	- By taking care of marketing, artists focus more on making better music.
 
 # How can we make this happen?
-	- Have UI/Frontend devs make the site look and feel like jizzing in a silk napkin.
-	- Have A1 communication. We're a group of homies with no boss.
-	- Backend devs focus on making bomb ass servers that serve shit better than anyone else.
-	- Have really good commit messages, and branch from master whenever we wanna experiment.
-	- We just do it. If it works, cool. If not, it was fun!
-		- The skills we learn will benefit us in the long run anyway.
+1. Have UI/Frontend devs make the site look and feel like jizzing in a silk napkin.
+2. Have A1 communication. We're a group of homies with no boss.
+3. Backend devs focus on making bomb ass servers that serve shit better than anyone else.
+4. Have really good commit messages, and branch from master whenever we wanna experiment.
+5. We just do it. If it works, cool. If not, it was fun!
+	- The skills we learn will benefit us in the long run anyway.
