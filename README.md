@@ -37,4 +37,15 @@
 
 3. Possibly change the game for underground artists.
 	- The streaming service could eliminate the need for an artist to have to market.
-	- - idk
+		- Marketing is over half of the battle to becoming a popular artist.
+		- Marketing is impossible/extremely difficult if you aren't popular/wealthy to begin with.
+		- Getting instant feedback is difficult if no one listens to your song.
+	- By taking care of marketing, artists focus more on making better music.
+
+# How can we make this happen?
+	- Have UI/Frontend devs make the site look and feel like jizzing in a silk napkin.
+	- Have A1 communication. We're a group of homies with no boss.
+	- Backend devs focus on making bomb ass servers that serve shit better than anyone else.
+	- Have really good commit messages, and branch from master whenever we wanna experiment.
+	- We just do it. If it works, cool. If not, it was fun!
+		- The skills we learn will benefit us in the long run anyway.
