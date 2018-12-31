@@ -2,7 +2,7 @@
 * Temporary name
 * Meant to be an alternative to soundcloud
 
-# Soundcloud shortfalls
+# Soundcloud shortcomings
 1. Soundcloud adds copyright strikes when someone tries to upload a remix of a licensed track
 	- This sucks dick because 90% of the time, the uploader doesn't know the track is licensed.
 	- We will use machine learning n shit to detect when a track is being illegally uploaded.
