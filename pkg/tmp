@@ -1,0 +1,5 @@
+INFO:
+
+pkg directory contains Go package objects. 
+They are compiled version of original package source code and they have .a file extension (a stands for archived). 
+These files contain the compiled package binary code, along with debug symbols and source information.
