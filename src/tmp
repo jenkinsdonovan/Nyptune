@@ -1,0 +1,3 @@
+src directory contains packages. 
+A package is a project directory containing Go source code (.go files). 
+Any packages installed using :~$ go get command will reside here as well (and its dependency packages).
