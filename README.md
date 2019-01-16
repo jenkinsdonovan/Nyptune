@@ -1,5 +1,4 @@
-# Shiba
-* Temporary name
+# Nyptune
 * Meant to be an alternative to soundcloud
 
 ## Soundcloud shortcomings
