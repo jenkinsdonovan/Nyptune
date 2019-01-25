@@ -1,54 +1,54 @@
-# Nyptune SDL Layout
+Nyptune SDL Layout
 
-## Requirements
+Requirements
 
-### Establish Security Requirements
+	Establish Security Requirements
 
-### Assign Security Experts
+	Assign Security Experts
 
-### Define Minimum Security Criteria
+	Define Minimum Security Criteria
 
-### Specify Bug/Work Tracking Tool
+	Specify Bug/Work Tracking Tool
 
-### Create Quality Gates/Bug Bars
+	Create Quality Gates/Bug Bars
 
-### Perform Security and Privacy Risk Assessment
+	Perform Security and Privacy Risk Assessment
 
-## Design
+Design
 
-### Establish Security Design Requirements
+	Establish Security Design Requirements
+	
+	Perform Security Design Review
+	
+	Perform Privacy Design Review
+	
+	Satisfy Minimum Cryptographic Design Requirements
+	
+	Analyze Attack Surface
+	
+	Complete Threat Models
 
-### Perform Security Design Review
+Implemetation
 
-### Perform Privacy Design Review
+	Specify Secure Compilers, Tools, etc.
+	
+	Identify/Depricate Unsafe Functions
+	
+	Perform Periodic Static Code Analysis
+	
+	erification
+	
+	Perform Dynamic Code Analysis
+	
+	Perform Fuzz Testing
 
-### Satisfy Minimum Cryptographic Design Requirements
+	Conduct Attack Surface Review
 
-### Analyze Attack Surface
+Release 
 
-### Complete Threat Models
-
-## Implemetation
-
-### Specify Secure Compilers, Tools, etc.
-
-### Identify/Depricate Unsafe Functions
-
-### Perform Periodic Static Code Analysis
-
-## Verification
-
-### Perform Dynamic Code Analysis
-
-### Perform Fuzz Testing
-
-## Conduct Attack Surface Review
-
-## Release 
-
-### Create Incident Response Plan
-
-### Perform a Final Security Review
-
-### Archive all Release Data
+	Create Incident Response Plan
+	
+	Perform a Final Security Review
+	
+	Archive all Release Data
 
