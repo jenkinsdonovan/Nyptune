@@ -140,3 +140,46 @@ input[type=text2]:focus {
 
 
 
+
+
+.sidenav {
+  height: 100%; 
+  width: 100px; 
+  position: fixed; 
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #333; 
+  overflow-x: hidden; 
+  padding-top: 32px;
+}
+
+
+
+.sidenav a {
+  padding: 32px 8px 6px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #c0ffee;
+  display: block;
+}
+
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
