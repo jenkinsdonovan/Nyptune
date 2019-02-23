@@ -10,7 +10,14 @@ audio {
 
 body {
 	margin:0;
-	background-color: gray;
+    background-image: url("images/bg.gif");
+    background-repeat: repeat;
+}
+
+.nyptune {
+    
+    padding-left: 32px;
+    
 }
 
 .navbar {
@@ -19,6 +26,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .navbar a {
@@ -32,8 +41,7 @@ body {
 }
 
 .navbar a:hover {
-  background: #ddd;
-  color: black;
+    color: #c0ffee;
 }
 
 .main {
@@ -149,9 +157,11 @@ input[type=text2]:focus {
   z-index: -1;
   top: 0;
   left: 0;
-  background-color: #333; 
+  background-color: #333;
   overflow-x: hidden; 
-  padding-top: 32px;
+  padding-top: 64px;
+  border-style: solid;
+  border-width: 1px;
 }
 
 
@@ -162,6 +172,9 @@ input[type=text2]:focus {
   font-size: 20px;
   color: #c0ffee;
   display: block;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
 }
 
 
@@ -183,3 +196,18 @@ input[type=text2]:focus {
   .sidenav a {font-size: 18px;}
 } 
 
+
+input[type=submit2] {
+    background-color: #999;
+    color: #c0ffee;
+    cursor: pointer;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type=submit2]:hover {
+    background-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+}
