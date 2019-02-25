@@ -28,6 +28,7 @@ body {
   width: 100%;
   border-style: solid;
   border-width: 1px;
+  z-index: 1;
 }
 
 .navbar a {
@@ -154,7 +155,7 @@ input[type=text2]:focus {
   height: 100%; 
   width: 100px; 
   position: fixed; 
-  z-index: -1;
+  z-index: 0;
   top: 0;
   left: 0;
   background-color: #333;
@@ -211,3 +212,12 @@ input[type=submit2]:hover {
     border-style: solid;
     border-width: 1px;
 }
+
+
+.bc {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    z-index: -1;
+}
+
