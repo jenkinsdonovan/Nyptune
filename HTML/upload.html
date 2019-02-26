@@ -48,15 +48,28 @@
   </div>
   <br>
   <br>
+  <div class="bc">
   <h1>Upload an audio file</h1>
+   <input type="text" name="title" placeholder="Title" required>
+   <input type="text" name="artist" placeholder="Artist" required>
+       <select>
+           <option value="" disabled="disabled" selected="selected">Genre</option>
+           <option value="1">Electronic</option>
+           <option value="2">Rock</option>
+           <option value="1">Heavy Metal</option>
+           <option value="2">Jazz</option>
+           <option value="1">Ambient</option>
+           <option value="2">Soundtrack</option>
+       </select>
+   <br>
     <input type="file" id="myFile">
-        
             <script>
                 function myFunction() {
                       var x = document.getElementById("myFile");
                       x.disabled = true;
                   }
               </script>
+  </div>
   
 </div>
 </body>
