@@ -219,5 +219,23 @@ input[type=submit2]:hover {
     border-style: solid;
     border-width: 1px;
     z-index: -1;
+    background-color: lightgray;
 }
 
+select {
+    
+    border-style: solid;
+    border-width: 1px;
+    height: 32px
+}
+
+input[type=file] {
+    
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #222;
+}
