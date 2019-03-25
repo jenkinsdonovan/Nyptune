@@ -1,3 +1,10 @@
+body, html {
+	margin: 0;
+	height: 100%;
+	width: auto;
+	overflow: hidden;
+}
+
 audio {
    position: fixed;
    left: 0;
@@ -26,6 +33,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 6%;
   border-style: solid;
   border-width: 1px;
 }
@@ -45,9 +53,18 @@ body {
 }
 
 .main {
-  padding: 16px;
-  margin-top: 30px;
+  position: relative;
+  padding: 0px;
+  top: 6%;
   height: 100%;
+}
+
+.maincontainer {
+  position: absolute;
+  top: 0;
+  left: 7%;
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -127,14 +144,6 @@ input[type=submit]:hover {
   }
 }
 
-
-
-
-
-
-
-
-
 input[type=text2] {
   width: 256px;
   padding: 15px 10px;
@@ -145,16 +154,11 @@ input[type=text2]:focus {
   width: 100%;
 }
 
-
-
-
-
-
 .sidenav {
   height: 100%; 
-  width: 100px; 
-  position: fixed; 
-  z-index: -1;
+  width: 7%; 
+  position: relative; 
+  /*z-index: -1;*/
   top: 0;
   left: 0;
   background-color: #333;
@@ -166,11 +170,12 @@ input[type=text2]:focus {
 
 
 
-.sidenav a {
-  padding: 32px 8px 6px 10px;
-  text-decoration: none;
+.sidenav button {
   font-size: 20px;
-  color: #c0ffee;
+  width: 100%;
+  margin-bottom: 10%;
+  height: 5%;
+  background-color: #c0ffee;
   display: block;
   border-style: solid;
   border-width: 1px;
@@ -179,16 +184,12 @@ input[type=text2]:focus {
 
 
 
-.sidenav a:hover {
-  color: #f1f1f1;
+.sidenav button:hover {
+  background-color: #f1f1f1;
 }
 
 
 
-.main {
-  margin-left: 160px; 
-  padding: 0px 10px;
-}
 
 
 @media screen and (max-height: 450px) {

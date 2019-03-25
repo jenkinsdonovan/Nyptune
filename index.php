@@ -8,6 +8,7 @@ session_start();
 <link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <title>Nyptune Web Player | Landing</title>
 </head>
 
@@ -48,17 +49,14 @@ session_start();
 
 
   <div class="sidenav">
-  <form action="/register.html">
-      <input type="submit2" value="Upload" />
-  </form>
-  <br>
-  <form action="/register.html">
-      <input type="submit2" value="Playlists" />
-  </form>
-  <br>
-  <form action="/register.html">
-      <input type="submit2" value="Settings" />
-  </form>
+  <button onclick="home();">Home</button>
+  <button onclick="upload();">Upload</button>
+  <button onclick="playlist();">Playlists</button>
+  <button onclick="settings();">Settings</button>
+  </div>
+
+  <div class="maincontainer">
+
   </div>
 
   
@@ -69,5 +67,26 @@ session_start();
 <source src="test.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
+
+<script> 
+	/* to be loaded when the page loads */
+	$(document).ready(function(){
+		$(".maincontainer").html("home");
+	});
+
+	/* button functions. Will eventually use ajax to call php scripts */
+	function home() {
+		$(".maincontainer").html("home");
+	}
+	function upload() {
+		$(".maincontainer").html("upload");
+	}
+	function playlist() {
+		$(".maincontainer").html("playlist");
+	}
+	function settings() {
+		$(".maincontainer").html("settings");
+	}
+</script>
 
 </html>
