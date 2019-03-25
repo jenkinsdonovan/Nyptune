@@ -23,11 +23,10 @@ session_start();
 		<?php
 		if(!isset($_SESSION['logged']) || $_SESSION['logged'] == FALSE) {
 		echo '
-        <form action="login.php" method="post">
+        <form action="login.php" method="post" style="width: 100%; display: inline-block;">
         	<input type="text" name="username" placeholder="Username" required>
         	<input type="password" name="password" placeholder="Password" required>
         	<input type="submit" value="Login">
-            <input type="submit" value="Sign Up" />
         </form>
 		';
 		} else {
@@ -40,7 +39,7 @@ session_start();
 		?>
       </div>
     </div>
-  <input type="text2" name="search" placeholder="Search for artists, songs, podcasts..."> 
+  <input type="text2" id="search" name="search" oninput="search()" placeholder="Search for artists, songs, podcasts..."> 
 </div>
 </div>
 
@@ -55,7 +54,7 @@ session_start();
   <button onclick="settings();">Settings</button>
   </div>
 
-  <div class="maincontainer">
+  <div class="maincontainer" id="maincontainer">
 
   </div>
 
@@ -75,6 +74,11 @@ Your browser does not support the audio element.
 	});
 
 	/* button functions. Will eventually use ajax to call php scripts */
+	function search() {
+		var x = document.getElementById("search").value;
+		document.getElementById("maincontainer").innerHTML = "Search: " + x;
+		/*$(".maincontainer").html("search");*/
+	}
 	function home() {
 		$(".maincontainer").html("home");
 	}
