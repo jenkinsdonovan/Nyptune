@@ -1,32 +1,16 @@
+/*************** MAIN BODY/HTML STUFF ****/
+* { box-sizing: border-box; }
 body, html {
 	margin: 0;
 	height: 100%;
 	width: auto;
 	overflow: hidden;
 }
+body { background: grey url("images/bg.gif") repeat fixed center; }
+/*************************************/
 
-audio {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: purple;
-   color: white;
-   text-align: center;
-}
 
-body {
-	margin:0;
-    background-image: url("images/bg.gif");
-    background-repeat: repeat;
-}
-
-.nyptune {
-    
-    padding-left: 32px;
-    
-}
-
+/**************************** NAVBAR */
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -37,7 +21,6 @@ body {
   border-style: solid;
   border-width: 1px;
 }
-
 .navbar a {
   float: left;
   display: block;
@@ -47,18 +30,18 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
 .navbar a:hover {
     color: #c0ffee;
 }
+/*************************************/
 
+/*************** MAIN & MAIN CONTAINER */
 .main {
   position: relative;
   padding: 0px;
   top: 6%;
   height: 100%;
 }
-
 .maincontainer {
   position: absolute;
   top: 0;
@@ -66,23 +49,64 @@ body {
   height: 100%;
   width: 100%;
 }
+/*************************************/
 
-
-
-
-
-
-* {
-  box-sizing: border-box;
+/************** LOGIN CONTAINER ****/
+.logincontainer {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 10px;
+  margin-top: 6px;
 }
+/*************************************/
 
+/****************** SIDEBAR **********/
+.sidenav {
+  height: 100%; 
+  width: 7%; 
+  position: relative; 
+  /*z-index: -1;*/
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden; 
+  padding-top: 64px;
+  border-style: solid;
+  border-width: 1px;
+}
+.sidenav button {
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 10%;
+  height: 5%;
+  background-color: #c0ffee;
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+}
+.sidenav button:hover {
+  background-color: #f1f1f1;
+}
+/*************************************/
 
+/******************** PLAYER *********/
+audio {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: purple;
+  color: white;
+  text-align: center;
+}
+/************************************/
 
-input,
-.btn {
+.loginform input {
   width: 20%;
   padding: 10px;
-  border: none;
+  /*border: none;*/
   border-radius: 1px;
   margin: 3px 0;
   opacity: 0.85;
@@ -90,14 +114,16 @@ input,
   font-size: 10px;
   line-height: 10px;
   text-decoration: none; 
+  color: white;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
 }
 
-input:hover,
-.btn:hover {
+.loginform input:hover {
   opacity: 1;
 }
-
-
 
 input[type=submit] {
   background-color: purple;
@@ -111,26 +137,12 @@ input[type=submit]:hover {
 }
 
 
-.col {
-  float: left;
-  width: 50%;
-  margin: auto;
-  padding: 0 10px;
-  margin-top: 6px;
-}
 
 
-
-
-.bottom-container {
-  text-align: center;
-  background-color: #666;
-  border-radius: 0px 0px 4px 4px;
-}
 
 
 @media screen and (max-width: 650px) {
-  .col {
+  .logincontainer {
     width: 100%;
     margin-top: 0;
   }
@@ -156,39 +168,7 @@ input[type=text2]:focus {
   width: 30%;
 }
 
-.sidenav {
-  height: 100%; 
-  width: 7%; 
-  position: relative; 
-  /*z-index: -1;*/
-  top: 0;
-  left: 0;
-  background-color: #333;
-  overflow-x: hidden; 
-  padding-top: 64px;
-  border-style: solid;
-  border-width: 1px;
-}
 
-
-
-.sidenav button {
-  font-size: 20px;
-  width: 100%;
-  margin-bottom: 10%;
-  height: 5%;
-  background-color: #c0ffee;
-  display: block;
-  border-style: solid;
-  border-width: 1px;
-  text-align: center;
-}
-
-
-
-.sidenav button:hover {
-  background-color: #f1f1f1;
-}
 
 
 
