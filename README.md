@@ -4,7 +4,7 @@
 ## Features
 1.  MP3 file upload support
 2.  User account creation 
-3.  Homepage audio feed  
+3.  Easy listening with main media player  
 4.  The user is able to login using their account credentials and log out.
 
 ## TODO
