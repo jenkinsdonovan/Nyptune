@@ -61,9 +61,15 @@ if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	echo "target: " . $target_file . "<br>";
 	exit;
 }
+$query = "SELECT ArtistID FROM artist WHERE Username='{$_SESSION['username']}';";
+$result = mysqli_query($db, $query);
+$row = mysqli_fetch_array($result);
+$id = $row['ArtistID'];
+$artist = mysqli_real_escape_string($db, htmlspecialchars($_POST['artist']));
+$title= mysqli_real_escape_string($db, htmlspecialchars($_POST['title']));
 
 $query = "insert into song (SongID, ArtistID, SongName, ArtistName, FilePath)
-			VALUES('$filehash', 1, '$name', '{$_SESSION['username']}', '$target_file');";
+			VALUES('$filehash', '$id', '$title', '{$_SESSION['username']}', '$target_file');";
 mysqli_query($db, $query) or die(mysqli_error($db));
 ?>
 

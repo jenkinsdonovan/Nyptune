@@ -43,7 +43,7 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 	<script type="text/javascript"> 
 		/* to be loaded when the page loads */
 		$(document).ready(function() {
-			$(".maincontainer").html("home");
+			home();
 		});
 
 		/* button functions. Will eventually use ajax to call php scripts */
@@ -53,7 +53,7 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 		}
 		function home() {
 			$.ajax({
-				url:	"scripts/loadHome.php",
+				url:	"scripts/loadSongs.php",
 				type:	"POST",
 				success: function(data) {
 					$(".maincontainer").html(data);
@@ -98,6 +98,7 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 			$(".maincontainer").html(uploadbutton);
 		}
 		function playlist() {
+			/*
 			$.ajax({
 				url:	"scripts/loadPlaylists.php",
 				type:	"POST",
@@ -105,8 +106,11 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 					$(".maincontainer").html(data);
 				}
 			});
+			*/
+			$(".maincontainer").html("to be implemented");
 		}
 		function settings() {
+			/*
 			$.ajax({
 				url:	"scripts/loadSettings.php",
 				type:	"POST",
@@ -114,6 +118,16 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 					$(".maincontainer").html(data);
 				}
 			});
+			*/
+			$(".maincontainer").html("to be implemented");
+		}
+		function changeSong(filename) {
+			alert("changing to " + filename);
+			var audio = document.getElementById('audio');
+			var source = document.getElementById('songsource');
+			source.src = filename;
+			audio.load();
+			audio.play();
 		}
 	</script>
             <script>
@@ -125,8 +139,8 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 </div>
 </body>
 
-<audio controls>
-<source src="test.mp3" type="audio/mpeg">
+<audio id="audio" controls>
+<source id="songsource" src="test.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
 
