@@ -28,6 +28,7 @@ $query =	"CREATE TABLE IF NOT EXISTS `nyptune`.`song` (".
   			"`ArtistID` INT(11) NOT NULL,".
   			"`SongName` VARCHAR(45) NOT NULL,".
   			"`ArtistName` VARCHAR(45) NOT NULL,".
+  			"`UploaderName` VARCHAR(45) NOT NULL,".
   			"`AlbumName` VARCHAR(45) NULL DEFAULT NULL,".
   			"`SongLength` FLOAT NULL DEFAULT NULL,".
   			"`Date` DATE NULL DEFAULT NULL,".

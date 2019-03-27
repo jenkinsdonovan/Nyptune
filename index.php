@@ -122,7 +122,6 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 			$(".maincontainer").html("to be implemented");
 		}
 		function changeSong(filename) {
-			alert("changing to " + filename);
 			var audio = document.getElementById('audio');
 			var source = document.getElementById('songsource');
 			source.src = filename;
