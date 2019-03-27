@@ -2,7 +2,7 @@
 include('config.php');
 error_reporting(E_ALL);
 $query =	"CREATE TABLE IF NOT EXISTS `nyptune`.`artist` (".
-  			"`ArtistID` INT(11) NOT NULL,".
+  			"`ArtistID` INT(11) NOT NULL AUTO_INCREMENT,".
   			"`ArtistName` VARCHAR(45) NOT NULL,".
   			"`CreationDate` DATE NULL DEFAULT NULL,".
   			"`Password` VARCHAR(45) NOT NULL,".

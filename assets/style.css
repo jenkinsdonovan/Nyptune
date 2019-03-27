@@ -211,3 +211,10 @@ input[type=submit2]:hover {
     border-style: solid;
     border-width: 1px;
 }
+.bc {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    z-index: -1;
+    background-color: lightgray;
+}
