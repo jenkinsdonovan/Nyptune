@@ -1,11 +1,12 @@
 <?php
 session_start();
+$logged = (isset($_SESSION['logged']))?$_SESSION['logged']:''; 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style.css">
-	<link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>Nyptune Web Player | Landing</title>
@@ -38,7 +39,7 @@ session_start();
 
 	<div class="maincontainer" id="maincontainer"/>
 
-	<script> 
+	<script type="text/javascript"> 
 		/* to be loaded when the page loads */
 		$(document).ready(function() {
 			$(".maincontainer").html("home");
@@ -50,16 +51,49 @@ session_start();
 			document.getElementById("maincontainer").innerHTML = "Search: " + x;
 		}
 		function home() {
-			$(".maincontainer").html("home");
+			$.ajax({
+				url:	"scripts/loadHome.php",
+				type:	"POST",
+				success: function(data) {
+					$(".maincontainer").html(data);
+				}
+			});
 		}
 		function upload() {
-			$(".maincontainer").html("upload");
+			var uploadbutton = "";
+			var logged = "<?php echo $logged;?>" ;
+			if(logged === "1") {
+				uploadbutton = `
+					<div id='uploadformcontainer'>
+					<form action='scripts/uploadSong.php' method='POST' enctype='multipart/form-data'>
+					Select file to upload:
+					<input type='file' name='fileToUpload' id='fileToUploa'">
+					<input type='submit' value='Upload Song' name='submit'>
+					</form>
+					</div>
+				`;
+			} else {
+				uploadbutton = "Please log in" + logged;
+			}
+			$(".maincontainer").html(uploadbutton);
 		}
 		function playlist() {
-			$(".maincontainer").html("playlist");
+			$.ajax({
+				url:	"scripts/loadPlaylists.php",
+				type:	"POST",
+				success: function(data) {
+					$(".maincontainer").html(data);
+				}
+			});
 		}
 		function settings() {
-			$(".maincontainer").html("settings");
+			$.ajax({
+				url:	"scripts/loadSettings.php",
+				type:	"POST",
+				success: function(data) {
+					$(".maincontainer").html(data);
+				}
+			});
 		}
 	</script>
 </div>
@@ -69,7 +103,5 @@ session_start();
 <source src="test.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-
-
 
 </html>
