@@ -27,7 +27,7 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 				 <input type="submit" value="Logout"/></form>';
 		}
 	?></div>
-  <input type="text2" id="search" name="search" oninput="search()" placeholder="Search for artists, songs, podcasts..."> 
+  <input type="text2" id="search" name="search" placeholder="Search for artists, songs, podcasts..."> 
 </div>
 
 <div class="main">
@@ -46,11 +46,6 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 			home();
 		});
 
-		/* button functions. Will eventually use ajax to call php scripts */
-		function search() {
-			var x = document.getElementById("search").value;
-			document.getElementById("maincontainer").innerHTML = "Search: " + x;
-		}
 		function home() {
 			$.ajax({
 				url:	"scripts/loadSongs.php",
@@ -128,6 +123,127 @@ $logged = (isset($_SESSION['logged']))?$_SESSION['logged']:'';
 			audio.load();
 			audio.play();
 		}
+
+		/*************************** LISTENER FOR SEARCH BAR ************/
+		var input = document.getElementById("search");
+		input.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				// getting user input
+				var userinp = document.getElementById("search").value;
+				// getting all songs
+				var phpret = "hi";
+				$.ajax({
+					type: "GET",
+					url: "scripts/getSongs.php",
+					async: false,
+					success: function(data) {
+						//phpret = Array.from(data);
+						phpret = data.split(";,;");
+					}
+				});
+				var test = "";
+				var ret = "";
+				var i;
+				for(i = 0; i < phpret.length; i++) {
+					test = matching(userinp, phpret[i]);
+					if(test != 0) {
+						$.ajax({
+							type: "POST",
+							data: {songName: phpret[i]},
+							url: "scripts/loadSongs.php",
+							async: false,
+							success: function(data) {
+								ret += data;
+							}
+						});
+					}
+				}
+
+				$(".maincontainer").html(ret);
+			}
+		});
+
+		function matching(inputstring, querystring) {
+			//var cleanis = clean(inputstring); //clean removes all and's and the's, to be implemented outside
+			cleanis = inputstring;
+			//var cleanqs = clean(querystring);
+			cleanqs = querystring;
+			if (cleanis.length == 0) {
+				return 0;
+			}
+			var maxlength = Math.max(0, Math.max(cleanis.length, cleanqs.length) / 2 - 1);
+			
+			var ismatch = [];
+			for (var i = 0; i < cleanis.length; i += 1) {
+			  	ismatch.push(false);
+			}
+
+			var qsmatch = [];
+			for (var i = 0; i < cleanqs.length; i += 1) {
+			  	qsmatch.push(false);
+			}
+			
+			var matchnum = 0;
+			for (var i = 0; i < cleanis.length; i += 1) {
+				var minidx = Math.max(i - maxlength, 0);
+				var maxidx = Math.min(i + maxlength + 1, cleanqs.length);
+
+				if (maxidx < minidx) {
+					break;
+				}
+
+				for (var j = minidx; j < maxidx; j += 1) {
+					if (/*!iqmatch[j] && */cleanis[i] == cleanqs[j]) {
+						//iqmatch[j] = true;
+						ismatch[i] = true;
+						matchnum += 1;
+						break;
+					}
+				}
+			}
+
+			if (matchnum == 0) {
+				return 0;
+			}
+
+			var ispos = [];
+			var qspos = [];
+			for (var i = 0; i < matchnum; i += 1) {
+			  	ismatch.push(0);
+			  	qsmatch.push(0);
+			}
+
+			var i, j;
+			for (i = 0, j = 0; i < cleanis.length; i += 1) {
+				if (ismatch[i] == true) {
+					ispos[j] = i;
+					j += 1; 
+				}
+			}
+
+			for (i = 0, j = 0; i < cleanqs.length; i += 1) {
+				if (qsmatch[i] == true) {
+					qspos[j] = i;
+					j += 1;
+				}
+			}
+
+			var htrans = 0;
+			for (var i = 0; i < matchnum; i += 1) {
+				if (cleanis[ispos[i]] != cleanqs[qspos[i]]) {
+					htrans += 1;
+				}
+			}
+			
+			//return matchnum;
+			return 
+			((1/3) * matchnum / cleanis.length) + 
+			((1/3) * matchnum / cleanqs.length) + 
+			((1/3) * (matchnum - htrans / 2) / matchnum);	
+			//one third value is weight and can be adjusted at will
+		}
+
 	</script>
             <script>
                 function myFunction() {
