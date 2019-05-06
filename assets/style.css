@@ -1,0 +1,273 @@
+/*************** MAIN BODY/HTML STUFF ****/
+* { box-sizing: border-box; }
+body, html {
+	margin: 0;
+	height: 100%;
+	width: auto;
+	overflow: hidden;
+	font-family: 'Oswald', sans-serif;
+}
+body { background: grey url("images/bg.gif") repeat fixed center; }
+/*************************************/
+
+
+/**************************** NAVBAR */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6%;
+  border-style: solid;
+  border-width: 1px;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: magenta;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+    color: #c0ffee;
+}
+/*************************************/
+
+/*************** MAIN & MAIN CONTAINER */
+.main {
+  position: relative;
+  padding: 0px;
+  top: 6%;
+  height: 94%;
+}
+.maincontainer {
+  position: absolute;
+  top: 0;
+  left: 7%;
+  height: 100%;
+  width: 93%;
+}
+/*************************************/
+
+/************** LOGIN CONTAINER ****/
+.logincontainer {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 10px;
+  margin-top: 6px;
+}
+/*************************************/
+
+/****************** SIDEBAR **********/
+.sidenav {
+  height: 100%; 
+  width: 7%; 
+  position: relative; 
+  /*z-index: -1;*/
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden; 
+  padding-top: 64px;
+  border-style: solid;
+  border-width: 1px;
+}
+.sidenav button {
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 10%;
+  height: 5%;
+  background-color: #c0ffee;
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+}
+.sidenav button:hover {
+  background-color: #f1f1f1;
+}
+/*************************************/
+
+/******************** PLAYER *********/
+audio {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: purple;
+  color: white;
+  text-align: center;
+}
+/************************************/
+
+/*************** Upload song ********/
+#uploadformcontainer {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+#uploadformcontainer form {
+	position:absolute;;
+	/*top: 50%;*/
+	left: 35%;
+
+}
+/************************************/
+
+.loginform input {
+  width: 20%;
+  padding: 10px;
+  /*border: none;*/
+  border-radius: 1px;
+  margin: 3px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  text-decoration: none; 
+  color: white;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+.loginform input:hover {
+  opacity: 1;
+}
+
+input[type=submit] {
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+}
+
+input[type=submit]:hover {
+  background-color: lightgray;
+}
+
+
+
+
+
+
+@media screen and (max-width: 650px) {
+  .logincontainer {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .vl {
+    display: none;
+  }
+  
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+input[type=text2] {
+  width: 15%;
+  padding: 15px 10px;
+  float: right;
+  transition: width .5s;
+}
+
+input[type=text2]:focus {
+  width: 30%;
+}
+
+
+a {
+	text-decoration: none;
+	font-color: black;
+}
+
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+
+input[type=submit2] {
+    background-color: #999;
+    color: #c0ffee;
+    cursor: pointer;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type=submit2]:hover {
+    background-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+}
+.bc {
+    text-align: center;
+    border-width: 1px;
+    z-index: -1;
+}
+
+#songcontainer {
+  	background-color: #c0ffee;
+	height: 10%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: .5%;
+}
+#songname {
+	display: flex;
+  	background-color: #c0dddd;
+	height: 100%;
+	width: 15%;
+	text-align: center;	
+	vertical-align: middle;
+	font-size: 130%;
+	float: left;
+	-webkit-transition-duration:0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: font-size;
+}
+#songcontainer:hover {
+	font-size: 110%;
+}
+button {
+	-webkit-transition-duration:0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: font-size;
+}
+button:hover {
+	font-size: 150%;
+}
+#like {
+	height: 100%;
+	width: 5%;
+	float: left;
+	z-index: 2;
+}
+#like img {
+	height: 50%;
+	width: 50%;
+	max-width: 100%;
+	max-height: 100%;
+	padding-top: 15%;
+}
+#songname p {
+	margin: auto;
+	text-align: center;
+	color: black;
+}
+
